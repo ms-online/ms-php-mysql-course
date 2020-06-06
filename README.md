@@ -1,1 +1,1 @@
-lesson-6:PHP数据类型-Numbers
+lesson-6:PHP数据类型-整型和浮点型
