@@ -1,6 +1,6 @@
 <?php 
-echo 'Hello World!';
-// echo '米修在线';
+
+
 ?>
 
 
@@ -12,6 +12,6 @@ echo 'Hello World!';
     <title>PHP 初学者课程</title>
 </head>
 <body>
-    <h1><?php echo 'Hello World' ;?></h1>
+    <h1>欢迎来到米修在线！</h1>
 </body>
 </html>
