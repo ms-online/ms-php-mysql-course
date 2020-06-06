@@ -1,1 +1,1 @@
-lesson-5:PHP数据类型-字符串
+lesson-6:PHP数据类型-Numbers
