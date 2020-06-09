@@ -25,7 +25,7 @@
 <body class="grey lighten-4">
     <nav class="white z-depth-0">
         <div class="container">
-            <a href="#" class="brand-logo brand-text">米修课程</a>
+            <a href="#" class="brand-logo brand-text">米修课堂</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
                 <li><a href="#" class="btn brand z-depth-0">添加课程</a></li>
             </ul>
