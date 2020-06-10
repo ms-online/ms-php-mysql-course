@@ -53,12 +53,6 @@
         </div>
       </div>
        <?php endforeach;?>
-        <!-- if语句 -->
-        <?php if(count($courses) >= 2):?>
-          <p>至少有两个课程内容</p>
-        <?php else:?>
-          <p>少于两个课程</p>
-        <?php endif;?>
    </div>
    </div>
    
