@@ -1,1 +1,1 @@
-lesson-24:创建MySQL数据库
+lesson-25:链接数据库
