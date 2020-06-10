@@ -1,1 +1,1 @@
-lesson-22:重定向页面
+lesson-23:认识MySQL数据库
