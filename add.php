@@ -33,6 +33,16 @@
                $errors['points'] ='知识要点必须以英文输入法逗号隔开';
            }
         }
+
+        // errors数组为空的时候
+        if(array_filter($errors)){
+            // echo '表单中有错误提示';
+        }else{
+            // echo '表单验证通过';
+            header('Location:index.php');
+            exit;
+            
+        }
     }
 ?>
 
