@@ -1,4 +1,6 @@
 <?php 
+    // 链接数据库
+    include('config/db_connect.php');
     // 初始化变量
     $email = $title = $points = '';
     // 初始化报错数组
@@ -39,9 +41,26 @@
             // echo '表单中有错误提示';
         }else{
             // echo '表单验证通过';
-            header('Location:index.php');
-            exit;
+            // 存储数据到数据库
+            // 格式化存储数据
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $title = mysqli_real_escape_string($conn, $_POST['title']);
+            $points = mysqli_real_escape_string($conn, $_POST['points']);
+
+            // 创建SQL语句
+            $sql = "INSERT INTO courses(title,email,points) VALUES('$title','$email','$points')";
+
+            // 存储数据到数据库并进行验证
+            if(mysqli_query($conn, $sql)){
+                //保存成功
+                header('Location:index.php');
+                exit;
+            }else{
+                echo 'query error :' .mysqli_error($conn);
+            }
+
             
+
         }
     }
 ?>
