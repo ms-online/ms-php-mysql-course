@@ -36,15 +36,15 @@
    <h4 class="center grey-text">课程列表</h4>
    <div class="container">
    <div class="row">
-     <?php foreach($courses as $course){?>
+     <?php foreach($courses as $course):?>
       <div class="col s6 md3">
         <div class="card z-depth-0">
           <div class="card-content center">
             <h6><?php echo htmlspecialchars($course['title']);?></h6>
             <ul class="grey-text">
-              <?php foreach(explode(',',$course['points']) as $point){?>
+              <?php foreach(explode(',',$course['points']) as $point):?>
                 <li><?php echo htmlspecialchars($point);?></li>
-              <?php }?>
+              <?php endforeach;?>
             </ul>
           </div>
           <div class="card-action right-align">
@@ -52,9 +52,17 @@
           </div>
         </div>
       </div>
-     <?php }?>
+       <?php endforeach;?>
+        <!-- if语句 -->
+        <?php if(count($courses) >= 2):?>
+          <p>至少有两个课程内容</p>
+        <?php else:?>
+          <p>少于两个课程</p>
+        <?php endif;?>
    </div>
    </div>
+   
+  
    
   <?php include('templates/footer.php');?>
      
