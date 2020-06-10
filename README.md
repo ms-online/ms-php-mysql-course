@@ -1,1 +1,1 @@
-lesson-27:渲染数据到DOM
+lesson-28:explode函数(字符串分割为数组)

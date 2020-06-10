@@ -24,6 +24,9 @@
   // 关闭数据库链接
   mysqli_close($conn);
 
+  // explode方法将字符串分割为数组
+  // print_r(explode(',',$courses[0]['points']));
+
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +41,11 @@
         <div class="card z-depth-0">
           <div class="card-content center">
             <h6><?php echo htmlspecialchars($course['title']);?></h6>
-            <div><?php echo htmlspecialchars($course['points']);?></div>
+            <ul class="grey-text">
+              <?php foreach(explode(',',$course['points']) as $point){?>
+                <li><?php echo htmlspecialchars($point);?></li>
+              <?php }?>
+            </ul>
           </div>
           <div class="card-action right-align">
             <a href="#" class="brand-text">了解更多</a>
