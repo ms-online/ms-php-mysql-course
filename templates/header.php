@@ -10,6 +10,9 @@
 
     // 空合并运算符
     $name = $_SESSION['name'] ?? '游客';
+
+    // 获取cookie
+    $gender = $_COOKIE['gender'] ?? '未知';
 ?>
 
 
@@ -51,6 +54,7 @@
             <a href="index.php" class="brand-logo brand-text">米修课堂</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
                 <li class="grey-text">欢迎<?php echo htmlspecialchars($name);?></li>
+                <li class="grey-text">(<?php echo htmlspecialchars($gender);?>)</li>
                 <li><a href="add.php" class="btn brand z-depth-0">添加课程</a></li>
             </ul>
         </div>

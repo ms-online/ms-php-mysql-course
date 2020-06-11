@@ -1,6 +1,10 @@
 <?php 
     // Session会话
     if(isset($_POST['submit'])){
+
+        // 存储性别信息到cookie
+        setcookie('gender',$_POST['gender'],time()+86400);
+        
         // 开启会话/创建会话
         session_start();
 
@@ -21,6 +25,10 @@
 <body>
    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
     <input type="text" name="name">
+    <select name="gender" >
+        <option value="male">先生</option>
+        <option value="female">女士</option>
+    </select>
     <input type="submit" name="submit" value="提交">
 </form>
 </body>
