@@ -1,19 +1,12 @@
 <?php 
-    // 超全局变量
-    //$_GET['name'], $_POST['name']
+    // Session会话
+    if(isset($_POST['submit'])){
+        // 开启会话/创建会话
+        session_start();
 
-    // $_SERVER
-    
-    // SERVER_NAME主机名
-    echo $_SERVER['SERVER_NAME'] . '<br/>';
-    // REQUEST_METHOD请求方法
-    echo $_SERVER['REQUEST_METHOD'] . '<br/>';
-    // SCRIPT_FILENAME获取当前执行脚本的绝对路径
-    echo $_SERVER['SCRIPT_FILENAME'] . '<br/>';
-    // PHP_SELF获取当前脚本的文件名
-    echo $_SERVER['PHP_SELF'] . '<br/>';
-
-
+        $_SESSION['name'] = $_POST['name'];
+        header('Location:index.php');
+    }
     
 
 ?>
@@ -26,6 +19,9 @@
     <title>PHP基础课程</title>
 </head>
 <body>
-   
+   <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+    <input type="text" name="name">
+    <input type="submit" name="submit" value="提交">
+</form>
 </body>
 </html>

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    $name = $_SESSION['name'];
+?>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +42,7 @@
         <div class="container">
             <a href="index.php" class="brand-logo brand-text">米修课堂</a>
             <ul id="nav-mobile" class="right hide-on-small-and-down">
+                <li class="grey-text">欢迎<?php echo htmlspecialchars($name);?></li>
                 <li><a href="add.php" class="btn brand z-depth-0">添加课程</a></li>
             </ul>
         </div>
