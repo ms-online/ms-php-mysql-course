@@ -1,6 +1,13 @@
 <?php
     session_start();
 
+    // $_SESSION['name'] = 'Summer';
+
+    if($_SERVER['QUERY_STRING'] == 'noname'){
+        // unset($_SESSION['name']);
+        session_unset();
+    }
+
     $name = $_SESSION['name'];
 ?>
 
