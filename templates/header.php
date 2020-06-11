@@ -20,6 +20,14 @@
         label{
             font-size: 16px;
         }
+
+        .course{
+            width:100px;
+            margin: 40px auto -40px;
+            display:block;
+            position:relative;
+            top: -40px;
+        }
     </style>
 </head>
 <body class="grey lighten-4">

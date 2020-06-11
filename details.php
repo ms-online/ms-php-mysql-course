@@ -46,7 +46,7 @@ include('config/db_connect.php');
 
 <?php include('templates/header.php');?>
 
-<div class="container center">
+<div class="container center grey-text">
    <?php if($course):?>
     <h4>课程标题：<?php echo $course['title'];?></h4>
     <p>课程作者：<?php echo $course['email'];?></p>

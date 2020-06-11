@@ -32,6 +32,7 @@
      <?php foreach($courses as $course):?>
       <div class="col s6 md3">
         <div class="card z-depth-0">
+          <img src="img/course.png" alt="课程" class="course">
           <div class="card-content center">
             <h6><?php echo htmlspecialchars($course['title']);?></h6>
             <ul class="grey-text">
