@@ -72,7 +72,7 @@
 
   <section class="container grey-text">
       <h4 class="center">添加课程</h4>
-      <form action="add.php" class="white" method="POST">
+      <form action="<?php echo $_SERVER['PHP_SELF']?>" class="white" method="POST">
           <label for="email">邮箱</label>
           <input type="text" name="email" value="<?php echo htmlspecialchars($email);?>">
           <div class="red-text"><?php echo $errors['email']; ?></div>

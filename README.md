@@ -1,1 +1,1 @@
-lesson-34:PHP三元运算符
+lesson-35:超全局变量

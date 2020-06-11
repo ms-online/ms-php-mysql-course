@@ -1,16 +1,19 @@
 <?php 
-    // 三元运算符
+    // 超全局变量
+    //$_GET['name'], $_POST['name']
 
-    $score = 60;
+    // $_SERVER
+    
+    // SERVER_NAME主机名
+    echo $_SERVER['SERVER_NAME'] . '<br/>';
+    // REQUEST_METHOD请求方法
+    echo $_SERVER['REQUEST_METHOD'] . '<br/>';
+    // SCRIPT_FILENAME获取当前执行脚本的绝对路径
+    echo $_SERVER['SCRIPT_FILENAME'] . '<br/>';
+    // PHP_SELF获取当前脚本的文件名
+    echo $_SERVER['PHP_SELF'] . '<br/>';
 
-    // if($score >= 60){
-    //     echo '恭喜你，考试通过！';
-    // }else{
-    //     echo '抱歉，请继续努力！';
-    // }
 
-    // 语法： 条件？结果1:结果2
-    // echo $score>=60?'恭喜你，考试通过':'抱歉，请继续努力！';
     
 
 ?>
@@ -23,10 +26,6 @@
     <title>PHP基础课程</title>
 </head>
 <body>
-    <!-- <?php if($score>=60){?>
-
-    <?php } ?> -->
-
-    <h2><?php echo $score>=60 ? '恭喜你，考试通过！': '抱歉，请继续努力！';?></h2>
+   
 </body>
 </html>
