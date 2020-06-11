@@ -4,11 +4,12 @@
     // $_SESSION['name'] = 'Summer';
 
     if($_SERVER['QUERY_STRING'] == 'noname'){
-        // unset($_SESSION['name']);
-        session_unset();
+        unset($_SESSION['name']);
+        // session_unset();
     }
 
-    $name = $_SESSION['name'];
+    // 空合并运算符
+    $name = $_SESSION['name'] ?? '游客';
 ?>
 
 
